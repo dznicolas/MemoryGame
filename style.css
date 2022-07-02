@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:wght@400;500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+body {
+  background-color: #9cb5fa;
+}
+
+.wrapper {
+  box-sizing: content-box;
+  width: 26.87em;
+  padding: 2.5em 3em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 15px;
+  box-shadow: 0 0.9em 2.8em rgb(86 66 0 / 20%);
+  background-color: #ebebeb;
+}
+
+.game-content {
+  position: relative;
+  width: 100%;
+  display: grid;
+  gap: 0.6em;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.stats-container {
+  margin-bottom: 1.2em;
+}
+
+.stats-container span {
+  font-weight: 600;
+}
+
+.card-content {
+  position: relative;
+  width: 6.25em;
+  height: 6.25em;
+  cursor: pointer;
+}
+
+.card-before,
+.card-after {
+  position: absolute;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #000;
+  transition: transform 0.7s ease-out;
+  backface-visibility: hidden;
+  background-color: #000150;
+}
+
+.card-before {
+  color: #ffffff;
+  font-size: 2.8em;
+  font-weight: 600;
+}
+
+.card-after {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.card-content.flipped .card-before {
+  transform: rotateY(180deg);
+}
+
+.card-content.flipped .card-after {
+  transform: rotateY(0deg);
+}
+
+.controls-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #9cb5fa;
+  top: 0;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 1em 1.5em;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #000;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.title {
+  font-weight: 500;
+  text-align: center;
+  font-weight: bold;
+}
+
+#stop {
+  font-size: 1.1em;
+  display: block;
+  margin: 1.1em auto 0 auto;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.controls-container button {
+  font-size: 1.3em;
+
+}
+
+.hide {
+  display: none;
+}
+
+#result {
+  text-align: center;
+}
+
+#result h2 {
+  font-size: 2.5em;
+}
+
+#result h4 {
+  font-size: 1.8em;
+  margin: 0.6em 0 1em 0;
+}
